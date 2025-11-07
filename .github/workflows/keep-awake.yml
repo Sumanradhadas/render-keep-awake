@@ -1,0 +1,18 @@
+name: Keep Render Sites Awake
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # Runs every 10 minutes
+  workflow_dispatch:          # Allows manual trigger
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping all Render sites
+        run: |
+          echo "Pinging Render apps..."
+          curl -Is https://webglowx.onrender.com | head -n 1
+          curl -Is https://glamour-salon.onrender.com | head -n 1
+          curl -Is https://sweetcrust-v5lp.onrender.com | head -n 1
+          echo "✅ All sites pinged successfully!"
