@@ -15,4 +15,5 @@ jobs:
           curl -Is https://webglowx.onrender.com | head -n 1
           curl -Is https://glamour-salon.onrender.com | head -n 1
           curl -Is https://sweetcrust-v5lp.onrender.com | head -n 1
+          curl -Is https://digital-tech-drivess.onrender.com | head -n 1
           echo "✅ All sites pinged successfully!"
